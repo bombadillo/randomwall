@@ -1,0 +1,19 @@
+{
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/bombadillo/randomwall.git"
+  },
+  "devDependencies": {
+    "coffee-script": "1.9.0",
+    "mocha": "*"
+  },
+  "dependencies": {
+    "wallpaper": "*"
+  },
+  "scripts": {
+    "buildCoffee": "coffee --watch --compile --output runScripts/ runScripts/",
+    "test": "mocha",
+    "hotCoffee": "coffee -o dist/ -cw src",
+    "hotTests": "coffee -cwo spec/ spec/"
+  }
+}
