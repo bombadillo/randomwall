@@ -8,12 +8,15 @@
     "mocha": "*"
   },
   "dependencies": {
-    "wallpaper": "*"
+    "wallpaper": "*",
+    "cheerio": "*",
+    "q": "*"
   },
   "scripts": {
     "buildCoffee": "coffee --watch --compile --output runScripts/ runScripts/",
     "test": "mocha",
     "hotCoffee": "coffee -o dist/ -cw src",
-    "hotTests": "coffee -cwo spec/ spec/"
+    "hotTests": "coffee -cwo spec/ spec/",
+    "start": "node dist/app.js"
   }
 }
