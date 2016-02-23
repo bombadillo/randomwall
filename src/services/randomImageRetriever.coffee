@@ -7,7 +7,7 @@ class RandomImageRetriever
   Get: =>
     @deferred = q.defer()
     randomPageNumber = RandomNumberGenerator.GetInt(1, 50)
-    imagesUrl = "#{Config.urls.wallHaven}#{randomPageNumber}"
+    imagesUrl = "#{Config.urls.getImages}#{randomPageNumber}"
     ImageParserFromHtml.GetImageUrls(imagesUrl).then @onImages, @onImagesFail
     return @deferred.promise
 
